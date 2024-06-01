@@ -1,0 +1,97 @@
+struct S {
+	int x;
+	string y;
+	bool z;
+	double a;
+	array int xs;
+	array string ys;
+	array bool zs;
+	array double as;
+}
+
+struct Node {
+	int val;
+	Node next;
+}
+
+int f(int x) {
+	return x;
+}
+
+void main() {
+	int x = 0;
+	string y = "Hello";
+	bool z = true;
+	double a = 3.14;
+	print(f(x));
+	print("\n");
+	print("Hello\nWorld!\n"); 
+	x = 2;
+	Node ptr = new Node(1, null);
+	
+	ptr.next = new Node(5, null);
+	
+	print(ptr.next.val);
+	
+	Node tmp = new Node(7, new Node(8, null));
+	if(true){
+		print("True\n");
+	}
+	else {
+		print("Not True\n");
+	}
+	
+	if(false){
+		print("False\n");
+	}
+	elseif(true){
+		print("Else if True\n");
+	}
+	else{
+		print("Else if false\n");
+	}
+	
+	if(false){
+		print("Clown\n");
+	}
+	else{
+		print("W\n");
+	}
+	
+	for(int i = 0; i < 10; i = i + 1) {
+		print(i);
+	}
+	
+	int j = 20;
+	while(j < 30) {
+		print(j);
+		print("\n");
+		j = j + 1;
+	}
+	
+	print(ptr.val);
+	print("ptrval\n");
+	
+	string pls = dtos(3.14);
+	print(pls);
+	
+	string myStr = "myStr";
+	print(get(2, myStr));
+	
+	int f = dtoi(3.14);
+	print(f);
+	int g = stoi("4");
+	print(g);
+	print("\n");
+	double h = stod("9.81");
+	print(h);
+	double i = itod(7);
+	print(i);
+	
+	array int xs = new int[5];
+	int length_of = length(xs);
+	print(length_of);
+	print("\n");
+	length_of = length("Hello, Rust!");
+	print(length_of);
+}

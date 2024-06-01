@@ -1,0 +1,28 @@
+//Towers of Hanoi
+void solveHanoi(int n, string fromRod, string toRod, string auxRod) {
+	if(n == 1) {
+		print("Move disk 1 from rod ");
+		print(fromRod);
+		print(" to rod ");
+		print(toRod);
+		print("\n");
+	}
+	else {
+		solveHanoi(n - 1, fromRod, auxRod, toRod);
+		print("Move disk from rod ");
+		print(fromRod);
+		print(" to rod ");
+		print(toRod);
+		print("\n");
+		solveHanoi(n - 1, auxRod, toRod, fromRod);
+	}
+}
+
+void main() {
+	int n = 3;
+	string fromRod = "A";
+	string toRod = "C";
+	string auxRod = "B";
+	
+	solveHanoi(3, fromRod, toRod, auxRod);
+}	

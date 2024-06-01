@@ -1,0 +1,22 @@
+//Recursive Factorial Function
+int fac(int n) {
+  if (n <= 0) {
+    return 1;
+  }
+  else {
+    int r = n * fac(n - 1);
+    return r;
+  }
+}
+
+
+void main() {
+  int v = 12;
+  int r = fac(v);
+  print("the factorial of ");
+  print(v);
+  print(" is ");
+  print(r);
+  print("\n");
+}
+

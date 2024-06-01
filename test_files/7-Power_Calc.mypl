@@ -1,0 +1,15 @@
+//Recursive Power Calc
+
+int power(int base, int exponent) {
+	if(exponent == 0) {
+		return 1;
+	}
+	else {
+		return base * power(base, exponent - 1);
+	}
+}
+
+void main() {
+	print("2 to the power of 5: ");
+	print(power(2, 5));
+}
